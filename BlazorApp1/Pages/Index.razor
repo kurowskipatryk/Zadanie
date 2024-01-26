@@ -1,0 +1,106 @@
+﻿@page "/"
+@using BlazorApp1.Data
+
+<MudDropContainer T="User" Items="usersList" ItemsSelector="@((item,dropzone) => item.Identifier == dropzone)" ItemDropped="ItemUpdated">
+
+    <ChildContent>
+        <div class="main">
+            <div class="background left-side">
+                <div class="p-3 wrap-users-empty">
+
+                    <MudText Style="@($"color:{Colors.Grey.Lighten5}")">Użytkownicy</MudText>
+                    <div class="users-empty d-flex gap-4 mx-4">
+                        <MudDropZone T="User" Identifier="Empty">
+                            
+                        </MudDropZone>
+                    </div>
+                </div>
+                <div class="separator"></div>
+                <div class="wrap-comments">
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="background right-side">
+                <div class="wrap-menu-tabs">
+                    <div class="p-3 tabs" id="tabs">
+                        <button style="display: block;" onclick="openCity(event,'group1')" ondragenter="openCity(event,'group1')"  class="tab tablinks active">
+                            Grupa 1
+                            <i class="fa-regular fa-star"></i>
+                        </button>
+
+                        <button onclick="openCity(event,'group2')" ondragenter="openCity(event,'group2')" class="tab tablinks">
+                            Grupa 2
+                            <i class="fa-solid fa-sun"></i>
+                        </button>
+
+                        <button onclick="openCity(event,'group3')" ondragenter="openCity(event,'group3')" class="tab tablinks">
+                            Grupa 3
+                            <i class="fa-regular fa-face-smile"></i>
+                        </button>
+                        <button onclick="openCity(event,'group4')" ondragenter="openCity(event,'group4')" class="tab tablinks">
+                            Grupa 4
+                            <i class="fa-solid fa-diamond"></i>
+                        </button>
+                        <button onclick="openCity(event,'group5')" ondragenter="openCity(event,'group5')" class="tab tablinks">
+                            Grupa 5
+                            <i class="fa-solid fa-yin-yang"></i>
+                        </button>
+                    </div>
+
+                    <div id="group1" class="tabcontent">
+                        <MudDropZone T="User" Identifier="group1">
+                        </MudDropZone>
+                    </div>
+                    <div id="group2" class="tabcontent">
+                        <MudDropZone T="User" Identifier="group2">
+
+                        </MudDropZone>
+                    </div>
+
+                    <div id="group3" class="tabcontent">
+                        <MudDropZone T="User" Identifier="group3">
+
+                        </MudDropZone>
+                    </div>
+
+                    <div id="group4" class="tabcontent">
+                        <MudDropZone T="User" Identifier="group4">
+
+                        </MudDropZone>
+                    </div>
+
+                    <div id="group5" class="tabcontent">
+                        <MudDropZone T="User" Identifier="group5">
+
+                        </MudDropZone>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        @*
+        <MudTabs @ref="tabs">
+        <MudTabPanel @ondragenter= '(() => OpenTab(1))' Text="Grupa 1">
+
+
+        </MudTabPanel>
+        <MudTabPanel @ondblclick='(() => OpenTab(2))' Text="Grupa 2">
+
+
+        </MudTabPanel>
+        <MudTabPanel @ondblclick='(() => OpenTab(2))' Text="Grupa 3">
+
+        </MudTabPanel>
+        </MudTabs> *@
+
+    </ChildContent>
+    <ItemRenderer>
+        @* <MudPaper>@context.Name</MudPaper> *@
+         <BlazorApp1.Components.UserComponent userContext="@context"></BlazorApp1.Components.UserComponent>
+        
+    </ItemRenderer>
+</MudDropContainer>

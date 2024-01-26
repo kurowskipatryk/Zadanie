@@ -1,0 +1,35 @@
+﻿.icon-logo path {
+    fill: white;
+}
+
+.menu {
+}
+
+.menu-icon:hover {
+    cursor: pointer;
+}
+
+    .menu-icon:hover .fa-chevron-down {
+        -webkit-animation: slide-bottom 0.2s linear both;
+        animation: slide-bottom 0.2s linear both;
+    }
+
+.fa-chevron-down {
+    color: white;
+    font-size: 8px;
+}
+::deep .popover{
+    background-color:black;
+}
+
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
+}

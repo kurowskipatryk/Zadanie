@@ -1,0 +1,141 @@
+﻿
+
+    @if (@userContext.Identifier == "Empty")
+    {
+        <div class="user-card">
+            <div class="wrap-user-card-data">
+
+                <div class="group-icon empty-id">
+                    <i class="fa-regular fa-circle"></i>
+                </div>
+                <div class="user-card-photo">
+                    <MudAvatar>
+                        <MudImage Src="@userContext.ImagePath"></MudImage>
+                    </MudAvatar>
+                </div>
+                <div class="user-card-name">
+                    <p>@userContext.Name</p>
+                    <p>@userContext.Surname</p>
+                </div>
+            </div>
+            <div class="user-card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                @userContext.City
+            </div>
+        </div>
+    }
+    else if (@userContext.Identifier == "group1")
+    {
+        <div class="user-card">
+            <div class="wrap-user-card-data">
+                <div class="group-icon group1-id">
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="user-card-photo">
+                    <MudAvatar>
+                        <MudImage Src="@userContext.ImagePath"></MudImage>
+                    </MudAvatar>
+                </div>
+                <div class="user-card-name">
+                    <p>@userContext.Name</p>
+                    <p>@userContext.Surname</p>
+                </div>
+            </div>
+            <div class="user-card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                @userContext.City
+            </div>
+        </div>
+    }
+    else if (@userContext.Identifier == "group2")
+    {
+        <div class="user-card">
+            <div class="wrap-user-card-data">
+                <div class="group-icon group2-id">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="user-card-photo">
+                    <MudAvatar>
+                        <MudImage Src="@userContext.ImagePath"></MudImage>
+                    </MudAvatar>
+                </div>
+                <div class="user-card-name">
+                    <p>@userContext.Name</p>
+                    <p>@userContext.Surname</p>
+                </div>
+            </div>
+            <div class="user-card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                @userContext.City
+            </div>
+        </div>
+    }
+    else if (@userContext.Identifier == "group3")
+    {
+        <div class="user-card">
+            <div class="wrap-user-card-data">
+                <div class="group-icon group3-id">
+                    <i class="fa-regular fa-face-smile"></i>
+                </div>
+                <div class="user-card-photo">
+                    <MudAvatar>
+                        <MudImage Src="@userContext.ImagePath"></MudImage>
+                    </MudAvatar>
+                </div>
+                <div class="user-card-name">
+                    <p>@userContext.Name</p>
+                    <p>@userContext.Surname</p>
+                </div>
+            </div>
+            <div class="user-card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                @userContext.City
+            </div>
+        </div>
+    }
+    else if (@userContext.Identifier == "group4")
+    {
+        <div class="user-card">
+            <div class="wrap-user-card-data">
+                <div class="group-icon group4-id">
+                    <i class="fa-solid fa-diamond"></i>
+                </div>
+                <div class="user-card-photo">
+                    <MudAvatar>
+                        <MudImage Src="@userContext.ImagePath"></MudImage>
+                    </MudAvatar>
+                </div>
+                <div class="user-card-name">
+                    <p>@userContext.Name</p>
+                    <p>@userContext.Surname</p>
+                </div>
+            </div>
+            <div class="user-card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                @userContext.City
+            </div>
+        </div>
+    }
+    else if (@userContext.Identifier == "group5")
+    {
+        <div class="user-card">
+            <div class="wrap-user-card-data">
+                <div class="group-icon group5-id">
+                    <i class="fa-solid fa-yin-yang"></i>
+                </div>
+                <div class="user-card-photo">
+                    <MudAvatar>
+                        <MudImage Src="@userContext.ImagePath"></MudImage>
+                    </MudAvatar>
+                </div>
+                <div class="user-card-name">
+                    <p>@userContext.Name</p>
+                    <p>@userContext.Surname</p>
+                </div>
+            </div>
+            <div class="user-card-location">
+                <i class="fa-solid fa-location-dot"></i>
+                @userContext.City
+            </div>
+        </div>
+    }
